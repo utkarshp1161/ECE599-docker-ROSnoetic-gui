@@ -111,7 +111,7 @@ gazebo
 
 RViz should launch, displaying its GUI window.
 
-### Step 9: Install rospy inside the container
+### Step 10: Install rospy inside the container
 
 If you need to use Python ROS nodes (rospy), install `python3-rospy` inside the container:
 
