@@ -30,14 +30,14 @@ By default, Docker requires **root** privileges. To allow your user to run Docke
    docker run hello-world
    ```
 
-📌 More details: [Post-installation steps for Linux](https://docs.docker.com/engine/install/linux-postinstall/)
+ More details: [Post-installation steps for Linux](https://docs.docker.com/engine/install/linux-postinstall/)
 
 ---
 
 ## **3. Common Docker Commands**
 Here are some essential Docker commands to get started:
 
-### **🛠 Basic Commands**
+### ** Basic Commands**
 | Command | Description |
 |---------|-------------|
 | `docker --version` | Check installed Docker version. |
@@ -47,7 +47,7 @@ Here are some essential Docker commands to get started:
 | `docker rmi <image_name_or_id>` | Remove a Docker image. |
 | `docker rm <container_id>` | Remove a container. |
 
-### **📦 Container Management**
+### ** Container Management**
 | Command | Description |
 |---------|-------------|
 | `docker run -d --name my_container <image>` | Run a container in detached mode (background). |
@@ -57,7 +57,7 @@ Here are some essential Docker commands to get started:
 | `docker start <container_name>` | Start a stopped container. |
 | `docker restart <container_name>` | Restart a container. |
 
-### **🛠 Docker Image Management**
+### ** Docker Image Management**
 | Command | Description |
 |---------|-------------|
 | `docker pull <image>` | Download an image from Docker Hub. |
