@@ -32,7 +32,7 @@ Below commands will show containers support for different hardware architecture.
 turludock which presets
 ```
 
-You can build the noetic container with mesa drivers if you have intel gpu
+You can build the noetic container with mesa drivers if you have intel integrated graphics
 ```bash
 turludock build -e noetic_mesa
 ```
