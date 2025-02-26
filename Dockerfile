@@ -36,7 +36,7 @@ ENV LC_ALL en_US.UTF-8
 
 # Install cmake v3.29.3
 RUN git clone https://github.com/Kitware/CMake.git && \
-    cd CMake && git checkout tags/v3.29.3 && ./bootstrap --parallel=6 && make -j6 && make install && \
+    cd CMake && git checkout tags/v3.29.3 && ./bootstrap --parallel=9 && make -j9 && make install && \
     cd .. && rm -rf CMake
 
 # Install terminator
@@ -85,7 +85,7 @@ RUN apt-get update && apt-get install -y \
     automake autoconf pkg-config libevent-dev libncurses5-dev bison && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 RUN git clone https://github.com/tmux/tmux.git && \
-    cd tmux && git checkout tags/3.4 && sh autogen.sh && ./configure && make -j6 && make install && \
+    cd tmux && git checkout tags/3.4 && sh autogen.sh && ./configure && make -j9 && make install && \
     cd .. && rm -rf tmux
 RUN sed -i '/^plugins=/ s/)/ tmux)/' ~/.zshrc
 

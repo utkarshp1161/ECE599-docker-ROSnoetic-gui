@@ -22,8 +22,28 @@ pip install turludock
 
 Use `turludock` to build a Docker image pre-configured for ROS Noetic with Mesa drivers for GUI support.
 
+Below commands will show the different ros versio'n available 
+```bash
+turludock which ros
+```
+
+Below commands will show containers support for different hardware architecture.
+```bash
+turludock which presets
+```
+
+You can build the noetic container with mesa drivers if you have intel gpu
 ```bash
 turludock build -e noetic_mesa
+```
+For manual build one can get the dockerfile and customize it
+```bash
+turludock generate -e noetic_mesa FOLDER_PATH
+```
+
+For nvidia gpu use
+```bash
+turludock build -e noetic_nvidia
 ```
 
 This command will download and build the necessary Docker image. This might take some time.
@@ -48,6 +68,11 @@ For Docker containers to access your host's X server for GUI applications, you m
 
 ```bash
 xhost +local:
+```
+
+on mac:
+```bash
+xhost +localhost
 ```
 
 **Security Note:**  `xhost +local:` allows any local client to connect to your X server. For a more secure approach in production or shared environments, consider more specific `xhost` rules or alternative methods for X11 forwarding.
@@ -125,15 +150,6 @@ apt install -y python3-rospy
 - `source /opt/ros/noetic/setup.bash`  
   *Ensure you source setup.bash in each new terminal or add it to `~/.bashrc`.*
 
-#### [**Docker Commands**](https://docs.docker.com/get-started/docker_cheatsheet.pdf)
-- `docker ps`  
-  *List running containers.*
-- `docker images`  
-  *List all Docker images.*
-- `docker rmi <image_name_or_id>`  
-  *Delete a Docker image.*
-- `docker exec -it <container_name> sh`  
-  *Open a shell inside a running container*
 
 
 Now you have a functional catkin workspace within your Docker container.
