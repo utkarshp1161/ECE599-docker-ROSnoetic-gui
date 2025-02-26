@@ -6,7 +6,7 @@ This tutorial guides you through setting up ROS Noetic within a Docker container
 ## Pre-requisites:
 
 - A Linux machine with sudo access.
-- Docker installed and configured. You should be able to run Docker commands with `sudo` or be in the `docker` group.
+- Docker installed and configured. You should be able to run Docker commands with `sudo` or be in the `docker` group. [Tutorial- setup docker on ubuntu](https://github.com/utkarshp1161/ECE599-docker-ROSnoetic-gui/blob/main/docker.md)
 
 ## Steps:
 
